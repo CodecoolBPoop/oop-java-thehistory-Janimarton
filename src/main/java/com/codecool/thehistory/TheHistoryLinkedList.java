@@ -20,6 +20,12 @@ public class TheHistoryLinkedList implements TheHistory {
     @Override
     public void removeWord(String wordToBeRemoved) {
         //TODO: check the TheHistory interface for more information
+        for (int index=0; index<wordsLinkedList.size(); index++){
+            if (wordToBeRemoved == wordsLinkedList.get(index)){
+                wordsLinkedList.remove(index);
+                index--; //inteliJ recommended to me, why?
+            }
+        }
     }
 
     @Override
