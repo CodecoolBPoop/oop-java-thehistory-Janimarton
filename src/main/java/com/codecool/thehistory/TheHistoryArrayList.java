@@ -43,6 +43,10 @@ public class TheHistoryArrayList implements TheHistory {
     @Override
     public void replaceOneWord(String from, String to) {
         //TODO: check the TheHistory interface for more information
+        for (String word:wordsArrayList){
+            int replacingIndex = wordsArrayList.indexOf(from);
+            wordsArrayList.set(replacingIndex,to);
+        }
     }
 
     @Override
