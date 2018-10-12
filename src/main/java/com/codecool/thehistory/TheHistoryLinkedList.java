@@ -31,12 +31,19 @@ public class TheHistoryLinkedList implements TheHistory {
     @Override
     public int size() {
         //TODO: check the TheHistory interface for more information
-        return 0;
+//        why this is not working? it is returning: 1.
+        return wordsLinkedList.size();
+//        int size=0;
+//        for(int num=0; num<wordsLinkedList.size(); num++) {
+//            size = size + 1;
+//        }
+//        return size;
     }
 
     @Override
     public void clear() {
         //TODO: check the TheHistory interface for more information
+        wordsLinkedList.clear();
     }
 
     @Override
