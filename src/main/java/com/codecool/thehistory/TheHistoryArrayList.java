@@ -20,8 +20,8 @@ public class TheHistoryArrayList implements TheHistory {
     @Override
     public void removeWord(String wordToBeRemoved) {
         //TODO: check the TheHistory interface for more information
-        for (String word:wordsArrayList){
-            if (word == wordToBeRemoved){
+        for (String word : wordsArrayList) {
+            if (word == wordToBeRemoved) {
                 wordsArrayList.remove(wordToBeRemoved);
             }
         }
@@ -43,10 +43,12 @@ public class TheHistoryArrayList implements TheHistory {
     @Override
     public void replaceOneWord(String from, String to) {
         //TODO: check the TheHistory interface for more information
-        for (String word:wordsArrayList){
-            int replacingIndex = wordsArrayList.indexOf(from);
-            wordsArrayList.set(replacingIndex,to);
+        int replacingIndex = wordsArrayList.indexOf(from);
+        if (replacingIndex != -1) {
+            wordsArrayList.set(replacingIndex, to);
         }
+
+
     }
 
     @Override
