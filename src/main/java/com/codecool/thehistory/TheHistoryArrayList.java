@@ -14,17 +14,24 @@ public class TheHistoryArrayList implements TheHistory {
     @Override
     public void add(String text) {
         //TODO: check the TheHistory interface for more information
+        wordsArrayList.add(text);
     }
 
     @Override
     public void removeWord(String wordToBeRemoved) {
         //TODO: check the TheHistory interface for more information
+        for (String word:wordsArrayList){
+            if (word == wordToBeRemoved){
+                wordsArrayList.remove(wordToBeRemoved);
+            }
+        }
     }
 
     @Override
     public int size() {
         //TODO: check the TheHistory interface for more information
-        return 0;
+        int numberOfItems = wordsArrayList.size();
+        return numberOfItems;
     }
 
     @Override
