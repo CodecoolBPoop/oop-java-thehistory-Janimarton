@@ -49,6 +49,11 @@ public class TheHistoryLinkedList implements TheHistory {
     @Override
     public void replaceOneWord(String from, String to) {
         //TODO: check the TheHistory interface for more information
+        for (int num=0; num<wordsLinkedList.size(); num++){
+            if (wordsLinkedList.get(num) == from){
+                wordsLinkedList.set(num, to);
+            }
+        }
     }
 
     @Override
